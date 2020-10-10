@@ -23,9 +23,28 @@ int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     ISR_Button_StartEx(Button_ISR);
+    
+    int config = 1;
 
     for(;;)
     {
+        switch(config)
+        {
+            case(1):
+                break;
+            case(2):
+                break;
+            case(3):
+                break;
+            case(4):
+                break;
+            case(5):
+                break;
+            case(6):
+                break;
+            case(7):
+                break;
+        }
     }
 }
 
