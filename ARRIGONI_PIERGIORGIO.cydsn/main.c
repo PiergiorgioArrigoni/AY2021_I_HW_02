@@ -16,11 +16,13 @@
 *   \author Piergiorgio Arrigoni
 */
 
+#include "InterruptRoutine.h"
 #include "project.h"
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
+    ISR_Button_StartEx(Button_ISR);
 
     for(;;)
     {
