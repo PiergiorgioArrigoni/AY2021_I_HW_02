@@ -16,15 +16,15 @@
 *   \author Piergiorgio Arrigoni
 */
 
-#include "InterruptRoutine.h"
 #include "project.h"
+#include "InterruptRoutine.h"
 
 int main(void)
 {
-    CyGlobalIntEnable; /* Enable global interrupts. */
-    ISR_Button_StartEx(Button_ISR);
+    int config = 1; //system must start at comfiguration 1
     
-    int config = 1;
+    CyGlobalIntEnable; /* Enable global interrupts. */
+    ISR_Button_StartEx(Button_ISR); //enable button isr (change of configuration)
 
     for(;;)
     {

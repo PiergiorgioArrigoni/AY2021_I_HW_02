@@ -10,14 +10,20 @@
  * ========================================
 */
 
-#include "InterruptRoutine.h"
+/**
+*   \file InterruptRoutine.h
+*   \brief Source file for the ISR triggered by the button
+*   \author Piergiorgio Arrigoni
+*/
 
-extern int config;
+#include "InterruptRoutine.h"
 
 CY_ISR(Button_ISR)
 {
+    extern int config;
+    
     config++;
-    if(config == 8)
+    if(config == 8) //return to first configuration
     {
         config = 1;
     }
