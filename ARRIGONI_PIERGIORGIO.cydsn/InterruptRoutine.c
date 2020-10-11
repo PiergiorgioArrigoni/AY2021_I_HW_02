@@ -8,8 +8,6 @@
 
 CY_ISR(Button_ISR)
 {   
-    Pin_1_Write(!Pin_1_Read());
-    CyDelay(1000);
     config++;
     if(config == 8) //return to first configuration
     {

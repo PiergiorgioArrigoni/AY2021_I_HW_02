@@ -15,8 +15,8 @@ int main(void)
 {    
     CyGlobalIntEnable; /* Enable global interrupts. */
     ISR_Button_StartEx(Button_ISR); //enable button ISR (change of configuration)
-    Pin_1_Write(!Pin_1_Read());
-    CyDelay(1000);
+    Green_PWM_Start();
+    Red_PWM_Start();
     
     for(;;)
     {
@@ -75,7 +75,7 @@ int main(void)
             case(6):
                 Red_PWM_WritePeriod(2*F_CLK_PWM);
                 Red_PWM_SetCompareMode(3);
-                Red_PWM_WriteCompare(0.25*F_CLK_PWM);
+                Red_PWM_WriteCompare(0.5*F_CLK_PWM);
                 
                 Green_PWM_WritePeriod(2*F_CLK_PWM);
                 Green_PWM_SetCompareMode(3);
