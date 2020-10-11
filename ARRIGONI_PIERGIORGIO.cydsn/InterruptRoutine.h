@@ -9,7 +9,8 @@
     #include "project.h"
     
     CY_ISR_PROTO(Button_ISR); 
-    extern int config;
 #endif
+
+    extern int config; 
 
 /* [] END OF FILE */

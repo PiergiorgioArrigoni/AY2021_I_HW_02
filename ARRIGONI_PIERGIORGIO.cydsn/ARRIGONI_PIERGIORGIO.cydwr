@@ -253,6 +253,7 @@
     <Group key="Pin">
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Push_Button" />
       <Data key="94b7fe3e-ab39-47ba-a434-f7bd41e66462" value="Green_LED" />
+      <Data key="c63f07b4-20b2-47d7-b514-c9a56d33b73f" value="Pin_1" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Red_LED" />
     </Group>
   </Group>
@@ -3348,6 +3349,11 @@
     <Group key="94b7fe3e-ab39-47ba-a434-f7bd41e66462">
       <Group key="0">
         <Data key="Port Format" value="2,6" />
+      </Group>
+    </Group>
+    <Group key="c63f07b4-20b2-47d7-b514-c9a56d33b73f">
+      <Group key="0">
+        <Data key="Port Format" value="2,1" />
       </Group>
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
