@@ -8,7 +8,8 @@
     #define _INTERRUPT_ROUTINE_H_
     #include "project.h"
     
-    CY_ISR_PROTO(Button_ISR);  
+    CY_ISR_PROTO(Button_ISR); 
+    extern int config;
 #endif
 
 /* [] END OF FILE */

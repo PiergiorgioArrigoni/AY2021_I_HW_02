@@ -7,9 +7,7 @@
 #include "InterruptRoutine.h"
 
 CY_ISR(Button_ISR)
-{
-    extern uint8 config;
-    
+{   
     config++;
     if(config == 8) //return to first configuration
     {

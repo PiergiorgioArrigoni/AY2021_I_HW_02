@@ -9,10 +9,10 @@
 
 #define F_CLK_PWM 12000
 
+int config = 1; //system must start at configuration 1
+
 int main(void)
-{
-    uint8 config = 1; //system must start at configuration 1
-    
+{    
     CyGlobalIntEnable; /* Enable global interrupts. */
     ISR_Button_StartEx(Button_ISR); //enable button ISR (change of configuration)
 
