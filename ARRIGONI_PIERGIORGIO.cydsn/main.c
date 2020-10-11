@@ -1,15 +1,3 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
-
 /**
 *   \file main.c
 *   \brief Main source file for Homework 2
@@ -21,10 +9,10 @@
 
 int main(void)
 {
-    int config = 1; //system must start at comfiguration 1
+    uint8 config = 1; //system must start at configuration 1
     
     CyGlobalIntEnable; /* Enable global interrupts. */
-    ISR_Button_StartEx(Button_ISR); //enable button isr (change of configuration)
+    ISR_Button_StartEx(Button_ISR); //enable button ISR (change of configuration)
 
     for(;;)
     {
