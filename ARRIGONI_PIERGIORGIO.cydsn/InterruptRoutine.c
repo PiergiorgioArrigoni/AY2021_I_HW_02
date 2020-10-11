@@ -6,17 +6,17 @@
 
 #include "InterruptRoutine.h"
 
-int config = 1; //system must start at configuration 1
+#define F_CLK_PWM 12000 //clock frequency of the two PWN
 
-CY_ISR(Button_ISR)
+int config = 1; //variable that stores the current configuration number
+
+CY_ISR(Button_ISR) //ISR triggered by the pressing of the button
 {   
     config++;
-    if(config == 8) //return to first configuration
-    {
+    if(config == 8) //return to first configuration after configuration 7
         config = 1;
-    }
     
-    switch(config)
+    switch(config) //implementation of the configurations
         {
             case(1):
                 Red_PWM_WritePeriod(2*F_CLK_PWM);

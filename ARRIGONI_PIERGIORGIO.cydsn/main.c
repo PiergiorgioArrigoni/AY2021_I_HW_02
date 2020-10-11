@@ -8,22 +8,18 @@
 
 int main(void)
 {    
-    CyGlobalIntEnable; /* Enable global interrupts. */
-    ISR_Button_StartEx(Button_ISR); //enable button ISR (change of configuration)
+    //system must start at configuration 1 (PWN not needed in this case)
+    Red_LED_Write(1);
+    Green_LED_Write(1);
     
-    Red_PWM_Start();
-    Red_PWM_WritePeriod(2*F_CLK_PWM);
-    Red_PWM_SetCompareMode(4);
-    Red_PWM_WriteCompare(2*F_CLK_PWM);
-           
+    //initialize PWNs
+    Red_PWM_Start(); 
     Green_PWM_Start();
-    Green_PWM_WritePeriod(2*F_CLK_PWM);
-    Green_PWM_SetCompareMode(4);
-    Green_PWM_WriteCompare(2*F_CLK_PWM);
     
-    for(;;)
-    {    
-    }
+    CyGlobalIntEnable; /* Enable global interrupts. */
+    ISR_Button_StartEx(Button_ISR); //enable button ISR
+    
+    for(;;); //most of the code is in interrupt.c
 }
 
 /* [] END OF FILE */
