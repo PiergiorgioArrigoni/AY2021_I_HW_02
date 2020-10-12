@@ -18,7 +18,7 @@ int main(void)
     CyGlobalIntEnable;
     ISR_Button_StartEx(Button_ISR); //enable button ISR
     
-    for(;;); //most of the code is in interrupt.c
+    for(;;); //most of the code is in InterruptRoutine.c
 }
 
 /* [] END OF FILE */

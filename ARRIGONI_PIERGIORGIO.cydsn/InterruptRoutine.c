@@ -6,7 +6,7 @@
 
 #include "InterruptRoutine.h"
 
-#define F_CLK_PWM 12000 //clock frequency of the two PWN
+#define F_CLK_PWM 12000 //clock frequency of the two PWNs
 
 int config = 1; //variable that stores the current configuration number
 
